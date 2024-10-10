@@ -8,53 +8,53 @@ const split_char = new SplitType("[data-split-char]", {
   tagName: "span",
 });
 
-const loader = () => {
-  const loadtl = gsap.timeline({
-    onComplete: () => {
-      gsap.set(".loader_wrap", { display: "none" });
-    },
-    defaults: {
-      duration: 1.25,
-      ease: "expo.out",
-    },
-  });
+// const loader = () => {
+//   const loadtl = gsap.timeline({
+//     onComplete: () => {
+//       gsap.set(".loader_wrap", { display: "none" });
+//     },
+//     defaults: {
+//       duration: 1.25,
+//       ease: "expo.out",
+//     },
+//   });
 
-  loadtl.set(".loader_wrap", { display: "flex" });
+//   loadtl.set(".loader_wrap", { display: "flex" });
 
-  //  loadtl.from(".loader_fora_text .word", {
-  //    delay: 0.5,
-  //  opacity:0,
-  //yPercent: 100,
-  //stagger: 0.08,
-  // })
+//   //  loadtl.from(".loader_fora_text .word", {
+//   //    delay: 0.5,
+//   //  opacity:0,
+//   //yPercent: 100,
+//   //stagger: 0.08,
+//   // })
 
-  // loadtl.to(".loader_fora_text .word", {
-  //       delay: .8,
-  //      opacity:0,
-  //     yPercent: -100,
-  //        stagger: 0.03,
-  //  })
+//   // loadtl.to(".loader_fora_text .word", {
+//   //       delay: .8,
+//   //      opacity:0,
+//   //     yPercent: -100,
+//   //        stagger: 0.03,
+//   //  })
 
-  loadtl.to(".loader_wrap", {
-    delay: 0.5,
-    yPercent: -100,
-  });
-  loadtl.from(
-    ".home_hero_wrap",
-    {
-      yPercent: 10,
-      scale: 0.9,
-      duration: 1,
-    },
-    "<0.1"
-  );
-  loadtl.from(
-    ".home_hero_layout ",
-    { opacity: 0, yPercent: 20, duration: 1.5, ease: "expo.out", stagger: 0.3 },
-    "<0.2"
-  );
-};
-loader();
+//   // loadtl.to(".loader_wrap", {
+//   //   delay: 0.5,
+//   //   yPercent: -100,
+//   // });
+//   loadtl.from(
+//     ".home_hero_wrap",
+//     {
+//       yPercent: 10,
+//       scale: 0.9,
+//       duration: 1,
+//     },
+//     "<0.1"
+//   );
+//   loadtl.from(
+//     ".home_hero_layout ",
+//     { opacity: 0, yPercent: 20, duration: 1.5, ease: "expo.out", stagger: 0.3 },
+//     "<0.2"
+//   );
+// };
+// loader();
 
 function createScrollTrigger(triggerElement, timeline) {
   // Reset tl when scroll out of view past bottom of screen
